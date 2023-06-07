@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Embed Link Opener!</title>
+  <title>Embed Link Opener</title>
   <style>
     body {
       background-color: rgb(90, 90, 90);
@@ -67,7 +67,8 @@
             alert("Invalid YouTube video URL.");
           }
         } else {
-          alert("Invalid URL or embedding is not allowed.");
+          var embedCode = '<div class="embed-container"><iframe width="100%" height="100%" src="' + link + '" frameborder="0"></iframe></div>';
+          document.body.innerHTML = embedCode;
         }
       }
     }

@@ -80,12 +80,17 @@
     }
 
     function isYouTubeVideo(url) {
-      return (url.includes("youtube.com") || url.includes("youtu.be"));
+      if (url != "https://www.youtube.com") {
+        return (url.includes("youtube.com") || url.includes("youtu.be"));
+      } else {
+        return false
+      }
+
+      
     }
 
     function extractYouTubeVideoId(url) {
-      console.log(url)
-        if (url != "https://www.youtube.com") {
+
                 var regExp = /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#\&\?]*).*/;
                 var match = url.match(regExp);
                 if (match && match[1].length === 11) {
@@ -93,9 +98,7 @@
                 } else {
                   return null;
                 }
-              } else {
-                return url
-              }
+     
               }
 </script>
 </body>

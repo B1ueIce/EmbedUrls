@@ -85,7 +85,7 @@
 
     function extractYouTubeVideoId(url) {
       console.log(url)
-        if (url != "www.youtube.com") {
+        if (url != "https://www.youtube.com") {
                 var regExp = /^.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#\&\?]*).*/;
                 var match = url.match(regExp);
                 if (match && match[1].length === 11) {
